@@ -1,0 +1,42 @@
+# Notes on Papers
+
+#### Rings and Pseudorings as Tracers of Galactic Resonances
+- Most galaxies have nonaxisymmetric components in their potenial
+- Involves Cloud Collisions, if stars form, would make the resonance or near-resonance region bright
+- Potential to be powerful probes of internal galaxy dymanics
+- Easy to link to specific dynamical resonances
+- Schwarz models usde as a guide to link both outer rings and outer pseudorings
+- SRC-J, ESO-B, and ESO-R southern sky surveys are abundant in ring phenomena
+- Fine grain IIIa-J emulsion and the limiting surface brightness makes it possible to detect small and faint rings
+- CSRG - "Catalog of Southern Ringed Galaxies" contains > 1000 galaxies
+
+#### Self-Gravitating Polar Rings in Axisymmetric and Triaxial Galaxy Potentials
+- Early type exhibit polar rings of gas, dust, and stars lying roughly perpindiular to the apparent major axis of the central galaxy
+- Self gravatating annulus of matter inclined to the prinipal planes of a triaxial galactic potential on the short axis
+- Stable and unstable equilbria exist
+- Probably formed from material accreted from outside the system (e.g. merger with companion galaxy)
+- Some PR are blue (recent star formation?), others are redder
+- Gas has possibly flowed into the galaxy from the ring
+- Ring shows tilted structure, even despite the graviational field of the flattened central elliptical or S0 galaxy that has a quadrupole component => ring particles precess about the pole @ a rate which depends on the radius and orbital inclination
+- Flatness of a polar ring should be destroyed in much less than Hubble time, thus implying that the observed rings were formed quite recently. 
+- Warped rings are realtively uncommon, and also show signs of star formation happening along with the stability, implying that the rings had to be stablized somehow
+- Divided into two types, "wide" and "narrow"
+- Rings tend to extend serveral times the optical radius of the underlying galaxies, appear as wide and nearly coplanar annuli with a hole around the central galaxy
+- Rotation curve of the ring gas has been measured (Schweizer et al 1983, Whitmore et al. 1987) as nearly flat, which indicates a substantial dark matter halo
+- Rounder central galaxies have polar rings that appear narrow and internal to the optical radius fo the central galaxy (AM 2020-504)
+- Luminous narrow rings may be dymanically similar to the minor-axis dust lanes found in ellipitcal galaxies
+- Spark (1986) showed that self-gravitating polar rings may have long-lived equilbirum states in the potential of an axisymmetric oblate galaxy.
+- Model the galaxy similar to an oblate or triaxial ellipsoid, with the stars/gas in the polar ring precessing about one the principal axes of the galaxy
+- If the precession is slow compared to the time required to complete one orbit, then the change in the orbital elements due tot he galaxy's aspericity may  be calculated by averaging over the rapid orbital motion
+- We can model the polar rings by create a set of concentric circular massive wires, with spin angular momentum calculated from the spehreically averaged gravitational field of the galaxy
+- 
+
+#### A Low Latitude Halo Stream around the Milky Way
+- Multiple types of stars within the milky way: thin disk, thick disk, spheroidal halo, and bulge. 
+- Asymmetry in the number stars in the think disk/inner halo from one side of the galactic center to the other suggest interactions from the Sagittarius dwarf or the bar
+- Disk-like distribution of metal-weak stars, which suggest that these were formed at around the same time
+- Satellite galaxies have been found to be merged with the thick disk, where a portion is rotating slower 
+- Kinmatic studies of the Sagittarius dwarf galaxy in the dawrf halo of the the Milky Way.
+- Large structures of stars which turns out to be two pieces of the tidal stream of the Sagittarius dwarf galaxy
+- Sagittarius dwarf stream turnoff stars and color-magnitude diagrams and identified addiontal substructure in the Galactic halo
+- 

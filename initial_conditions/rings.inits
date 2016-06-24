@@ -1,0 +1,30 @@
+# Generates initial grid and star fields
+# 
+# Stars modeled as particles
+
+#Grid Info
+TopGridRank					= 3
+TopGridDimensions			= 32 32 32
+SelfGravity					= 1 //gravity on
+TopGridGravityBoundary		= 0 //periodic boundary conditions
+LeftFaceBoundaryCondition	= 3 3 3
+RightFaceBoundaryCondition	= 3 3 3
+
+#Cosmology params
+ComovingCoordinates			= 0 //expansion off, might need to change this
+CosmologyHubbleConstantNow	= 0.5 // h = 0.5
+CosmologyComovingBoxSize	= 10.0    // 10 Mpc/h (?)
+CosmologyInitialRedshift	= 60
+GravitationalConstant      	= 1.0     // this must be true for cosmology
+CosmologyOmegaBaryonNow      = 0.044
+CosmologyOmegaMatterNow      = 0.27
+CosmologyOmegaLambdaNow      = 0.73
+
+#Grid refinement
+StaticHierarchy			   	= 0
+MaximumRefinementLevel		= 3 //baryon overdesnity
+RefineBy					= 3 //refinement factor
+
+#Data IO
+dtDataDump             		= 50000
+DataDumpName				= data

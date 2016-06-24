@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ./finalPaper.aux
+The style file: apj.bst
+Database file #1: finalPaper.bib
+Repeated entry---line 142 of file finalPaper.bib
+ : @misc{dynamicsOfTidalTails
+ :                           ,
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 28 entries,
+            3085 wiz_defined-function locations,
+            807 strings with 7987 characters,
+and the built_in function-call counts, 11571 in all, are:
+= -- 995
+> -- 696
+< -- 21
++ -- 235
+- -- 229
+* -- 879
+:= -- 2200
+add.period$ -- 28
+call.type$ -- 28
+change.case$ -- 163
+chr.to.int$ -- 28
+cite$ -- 28
+duplicate$ -- 511
+empty$ -- 774
+format.name$ -- 292
+if$ -- 2315
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 25
+newline$ -- 88
+num.names$ -- 112
+pop$ -- 206
+preamble$ -- 1
+purify$ -- 163
+quote$ -- 0
+skip$ -- 400
+stack$ -- 0
+substring$ -- 526
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 249
+warning$ -- 0
+while$ -- 102
+width$ -- 0
+write$ -- 276
+(There was 1 error message)

@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\title{Stellar Streams Methods}
+\author{pwang16 }
+\date{February 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Initial Conditions and Methods}
+By assuming the base cosmology is a cold dark matter (CDM) cosmology, I can then further make the assumption that dark matter halos have a universal density profile. This can be modeled as $\rho(r) \propto r^{-1}(r+r_s)^{-2}$. Here $r_s$ is the scale length based on the virial radius, which can then be modeled as:
+\[
+R_{virial} = c*r_s
+\]
+\[
+c = R_{virial}/r_s
+\]
+
+Thus the Milky Way halo can be modeled with a static halo potential. Chandrasekhar (1943) found that the effect of dynamical friction was significant on stars escaping the Milky Way, but only due to the star's near neighbors \cite{dynamicalFriction}. Taking into account the density difference between the Milky Way and the satellite galaxies I are trying to model, along with the large distances between the Milky Way and it's satellites, the effects of dynamical friction can be safely ignored to simply simulations. Furthermore, the effects of dynamical friction only come into significant effect once the stellar stream has formed and has an infall into the Milky Way, and since the purpose of this simulation is to understand the formation of stellar streams, dynamical friction can be safely ignored. 
+
+The satellites can then be modeled with a Navarro-Frenk-White profile, with the outer edge of the halo being the $R_{virial}$, as shown by Bran & Norman (1998) \cite{bryanNorman}. However, I must also the model the tidal field of the Milky Way for a usable solution, which extends far beyond the $R_{virial}$ of the Milky Way. To fully simulate this takes far more computational power than initially expected, and a solution is currently in progress. The rough idea is to place the satellite already within the tidal field and account for the tidal field change when the satellite is created. 
+
+The satellite halo can then be characterized with it's initial maximum circular velocity, and then using the acceptance-rejection algorithm each particle within the halo can then be modeled. By setting the concentration parameter as $c = 15$ for the Navarro-Frenk-White profile for both the Milky Way and the satellite, three different sizes of satellites are generated, with the medium size modeled after the Sagittarius Stream. Since the Sagittarius stream is the most obvious and widely recognized stellar stream, it made sense to use it as starting point, with one satellite magnitudes larger and the other satellite magnitudes smaller. Because mass of the stellar streams change continuously as the simulation progresses, it becomes necessary to have an alternate way of measuring satellite size within the simulation, which is the rotational velocity $V_{sat, max}$. Applied to the simulation, I used a 0.45, 0.16, and 0.08 times the maximum rotational velocity for the Milky Way ($V_{mw, max}$) for the rotational velocity, which were the same ones used by J-H. Choi et al \cite{dymanicsOfTidalTails}, and will be henceforth known as Massive, Sagittarius, and Small satellites. The masses are summarized in the table below:
+
+\begin{center}
+	\begin{tabular}{| l | l | l | l | }
+		\hline Satellite & $M/M_{mw, vir}$ & $R/R_{mw, vir}$ & $V_{max}/V_{mw, max}$ \\ \hline
+		Massive & $1.9 \times 10^{-2}$ & $9.02 \times 10^{-2}$ & 0.45 \\ \hline
+		Sagittarius & $9.0 \times 10^{-4}$ & $3.38 \times 10^{-2}$ & 0.16 \\ \hline
+		Small & $9.9 \times 10^{-5}$ & $1.66 \times 10^{-2}$ & 0.08 \\ \hline
+	\end{tabular}
+\end{center}
+
+To fully experiment with the orbital size of each satellite, two different orbits were tested per satellite, with varying eccentricity and apocenters. To properly measure the orbits, the eccentricity was defined as:
+
+\[
+e \equiv \frac{r_a-r_p}{r_a+r_p}
+\]
+
+with $r_a$ corresponding to the apocenter and $r_p$ corresponding to the pericenter. Thus two orbits were chosen, with the first being completely circular ($e = 0$) with a radius of $0.4R_{vir}$, and the second having $e = .5$, pericenter of $.2R_{vir}$, and an apocenter of $0.6R_{vir}$. To create the time units, I considered one circular orbital period to be $\approx 2.0$, thus to take 5000 timesteps each timestep was chosen to be $4 \times 10^4$ time units.
+
+\section{Code Discussion}
+To accomplish this, I decided to use the Enzo, a hybrid hydrodynamics and n-body simulation code. Setting the units where $M_{vir} = 1$, $R_{vir}  = 1$, and the gravitational constant $G = 1$, the galaxy disk problem type in Enzo was used, using the n-body simulation method. In order to apply this into Enzo, I used an adaptive mesh refinement (AMR) hydro + dark matter cosmology simulation. Using a single grid CDM simulation and current cosmological parameters, each satellite was created with $10^6$ particles. The refinement of the AMR was handled such that the child grid is twice as refined as the parent grid. The simulation grid was set such that the maximum refinement level was 6 and a maximum gravity refinement level of 4, meaning that there is 6 layers of refinement for the grid itself and gravitational acceleration were computed on level 4. This way, the gravitational accelerations are smoothed onto the more refined grid. The minimum overdensity for refinement was set to be for the dark matter mass, which then refines the grid if it crosses the threshold of dark matter within the grid area.
+
+Due to Navarro-Frenk-White density profile extending to infinity, truncation must occur in order to limit the solution, which meant that the real satellite sub-halos are far too large to be easily modeled, as the Milky Way's tidal field would already disrupt the satellite halo before it got anywhere near the orbital radius, leading to tidal truncation of the satellites. However, it was shown by Diemand et al. in 2003 that disregarding the evolutionary history and ignoring gravitational heating in truncation of the sub-halos still produces a realistic satellite mass \cite{truncationOfHalos}. This suggests that, despite tidal truncation, CDM sub-halos can still be represented by the tidally truncated models. The conventional solution to tidal truncation  is to place the satellite in the Milky Way halo and orbit to start and include the Milky Way's tidal field when the initial phase-space distribution of the satellite is generated \cite{dymanicsOfTidalTails}.
+
+To simulate this, Enzo uses a Particle-Mesh n-body method that calculates the collision-less particle dynamics. The particle trajectories are solved by two coupled equations: 
+\[
+\frac{d \mathbf{x}_p}{dt} = \mathbf{v}_p
+\]
+and
+
+\[
+\frac{d \mathbf{v}_p}{dt} = -\nabla \phi
+\]
+Where $\mathbf{x}_p$ and $\mathbf{v}_p$ are the particle position and velocity parameters, respectively \cite{enzoAlgos}. 
+
+Enzo solves this with the elliptic Poisson's equation:
+\[
+\nabla^2 \phi = 4\pi G \rho
+\]
+
+with $\rho$ as the density of the collision-less fluid, which in this case is the particles of the halos. Using finite-differencing and solved in the same timestep as hydrodynamics, the dark matter particles are then sampled onto a the refined grids with a triangular-shaped cloud interpolation to create a spatially discretized density field. The elliptical equation, once solved with fast Fourier transform, create the relaxation on the subgrids. 
+
+\section{Test Results Discussion}
+In order to test the effectiveness of the simulation, I modeled the Sagittarius satellite on a completely circular orbit.
+These results may be wholly incorrect due to the results being not fully convergent, but this is still a discussion on what I I would do given the correct results.
+
+The Milky Way's tidal field adds energy to the orbiting satellite, which in turn drives mass loss from the satellite, a combination of the forces from the Milky Way and the non-inertial forces from the satellite orbit \cite{structureofDarkMatterHalos}. Furthermore, the addition of energy causes work to be done against the gravitational potential of the satellite, which then in turn causes mass loss. In order to understand the formation of stellar streams, this mass loss must be properly modeled. The gravitational force from the satellite starts to decelerate the leading tail once the tidal force from the Milky Way starts to exert effect, which leads to the angular momentum of the tail exceeding the point of escape. As a result, the conserved quantities of the ejecta may be dramatically different from that of the satellite center of mass \cite{dymanicsOfTidalTails}. As a result, massive satellites (such as the one modeled) become extremely complex \cite{ibataLewis}.
+
+Since the satellite disruption is an effect on the gravitational field of the satellite past the tidal radius, I used the Sagittarius satellite in the first circular orbit. Here, the expectation is that the majority of the mass within the satellite becomes unbound near the Lagrange points. With the Sagittarius galaxy starting at $0.4R_{vir}$, and 4 different timestep snapshots at $T$ = 0.0, 1.5, 3.0, and 4.5, I found that the Sagittarius satellite would eventually smear itself across the entire orbit. At 1.5, the satellite displayed signs of stretching itself across the entire lower right quarter of the orbit, while at 3.0 the satellite had created a stream across the entire left half of the orbit. At 4.5, the satellite had almost covered the entire orbit with a stellar stream. 
+
+\bibliography{method} 
+\bibliographystyle{unsrt} \end{document}
