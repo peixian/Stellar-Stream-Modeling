@@ -1,6 +1,6 @@
-# Notes on Papers
+* Notes on Papers
 
-#### Rings and Pseudorings as Tracers of Galactic Resonances
+** Rings and Pseudorings as Tracers of Galactic Resonances
 - Most galaxies have nonaxisymmetric components in their potenial
 - Involves Cloud Collisions, if stars form, would make the resonance or near-resonance region bright
 - Potential to be powerful probes of internal galaxy dymanics
@@ -10,7 +10,7 @@
 - Fine grain IIIa-J emulsion and the limiting surface brightness makes it possible to detect small and faint rings
 - CSRG - "Catalog of Southern Ringed Galaxies" contains > 1000 galaxies
 
-#### Self-Gravitating Polar Rings in Axisymmetric and Triaxial Galaxy Potentials
+** Self-Gravitating Polar Rings in Axisymmetric and Triaxial Galaxy Potentials
 - Early type exhibit polar rings of gas, dust, and stars lying roughly perpindiular to the apparent major axis of the central galaxy
 - Self gravatating annulus of matter inclined to the prinipal planes of a triaxial galactic potential on the short axis
 - Stable and unstable equilbria exist
@@ -29,9 +29,8 @@
 - Model the galaxy similar to an oblate or triaxial ellipsoid, with the stars/gas in the polar ring precessing about one the principal axes of the galaxy
 - If the precession is slow compared to the time required to complete one orbit, then the change in the orbital elements due tot he galaxy's aspericity may  be calculated by averaging over the rapid orbital motion
 - We can model the polar rings by create a set of concentric circular massive wires, with spin angular momentum calculated from the spehreically averaged gravitational field of the galaxy
-- 
 
-#### A Low Latitude Halo Stream around the Milky Way
+** A Low Latitude Halo Stream around the Milky Way
 - Multiple types of stars within the milky way: thin disk, thick disk, spheroidal halo, and bulge. 
 - Asymmetry in the number stars in the think disk/inner halo from one side of the galactic center to the other suggest interactions from the Sagittarius dwarf or the bar
 - Disk-like distribution of metal-weak stars, which suggest that these were formed at around the same time
@@ -39,4 +38,3 @@
 - Kinmatic studies of the Sagittarius dwarf galaxy in the dawrf halo of the the Milky Way.
 - Large structures of stars which turns out to be two pieces of the tidal stream of the Sagittarius dwarf galaxy
 - Sagittarius dwarf stream turnoff stars and color-magnitude diagrams and identified addiontal substructure in the Galactic halo
-- 
