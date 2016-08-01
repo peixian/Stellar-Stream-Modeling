@@ -16,13 +16,15 @@ A stellar stream is a trail of stars that orbit a host galaxy. Usually formed th
 In this picture from the [[http://www.ast.cam.ac.uk/~vasily/][SDSS]], the color corresponds to distance, showing 2 large stellar streams: [[papers/ghostOfSagittarius.pdf][the Sagittarius Stream]] and the [[papers/Virgo\ Overdensity.pdf][Orphan Stream]]. 
 ** Formation of stellar streams:
 Originally, the host galaxy and the satellite dwarf galaxy are held within a [[https://en.wikipedia.org/wiki/Two-body_problem][2 body system]], shown below:
-#+CAPTION 2 Body Problem
+
 [[./images/2body.gif]] 
+
 However, as the satellite dwarf galaxy moves through it's [[./papers/Dynamics\ of \ Interacting\ Galaxies.pdf][Lagrange Points]], shown below:
-#+CAPTION Lagrange Points
+
 [[./images/lagrange.png]]
 the satellite dwarf galaxy begins to vibrate at the stable L4 and L5 points. As a result of this, stars are "leaked" from the satellite galaxy to orbits with either smaller radius (thus lower energy) or orbits with larger radius (thus higher energy). Due to this energy differential, the leading and trailing tail of a stellar stream is formed, as can be seen in the extremely crude picture I made below:
-#+CAPTION Leading and Trailing Tails
+
+
 [[./images/tailformation.png]]
 Imagine the red sphere is a satellite galaxy orbiting around an (unseen) Milky Way. The blue arrow represents the direction of the orbital energy of the satellite galaxy, while the stars the satellite is leaking falls into one of the two red arrows.
 ** My results:
@@ -35,13 +37,15 @@ I conducted /n/-body simulations of 3 types of satellite galaxies with 10^6 part
 
 Using these 3 types, I generated 3 distinct stellar streams:
 - Massive Satellite Tail:
-#+CAPTION Tail of the Massive Satellite
+
 [[./finalCopy/images/large.png]]
+
 - Medium Satellite Tail:
-#+CAPTION Tail of the Medium Satellite
+
 [[./finalCopy/images/medium.png]]
+
 - Small Satellite Tail:
-#+CAPTION Tail of the Small Satellite
+
 [[./finalCopy/images/small.png]]
 Each satellite galaxy type was simulated for 2 whole rotations around the Milky Way. As seen, the initial conditions of the satellite have very noticeable effects on the stellar streams produced. The stellar stream resulting from the massive satellite collapses into the Milky Way, suggesting that stellar streams that cross the Milky Way were most likely former massive satellites. As the satellites become smaller, their leading tail radius becomes larger. In short, the larger the satellite, the closer it's stellar stream is to the Milky Way. 
 
