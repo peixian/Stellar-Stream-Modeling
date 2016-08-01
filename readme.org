@@ -11,8 +11,9 @@ You should read the real paper if you're interested at [[https://github.com/peix
 A stellar stream is a trail of stars that orbit a host galaxy. Usually formed through [[https://en.wikipedia.org/wiki/Tidal_stripping][tidal stripping]] of former [[https://en.wikipedia.org/wiki/Dwarf_galaxy][dwarf galaxies]], stellar streams are composed of two distinct parts: a leading tail and a trailing tail.
 ** Examples of stellar streams: 
 [[https://en.wikipedia.org/wiki/Field_of_Streams][Vasily Belokurov's Field of Streams]] is the best example of stellar streams in the Milky Way, displayed below:
-#+CAPTION Vasily's Field of Streams
+
 [[./finalCopy/images/fieldofstreams.jpg]]
+
 In this picture from the [[http://www.ast.cam.ac.uk/~vasily/][SDSS]], the color corresponds to distance, showing 2 large stellar streams: [[papers/ghostOfSagittarius.pdf][the Sagittarius Stream]] and the [[papers/Virgo\ Overdensity.pdf][Orphan Stream]]. 
 ** Formation of stellar streams:
 Originally, the host galaxy and the satellite dwarf galaxy are held within a [[https://en.wikipedia.org/wiki/Two-body_problem][2 body system]], shown below:
@@ -47,6 +48,7 @@ Using these 3 types, I generated 3 distinct stellar streams:
 - Small Satellite Tail:
 
 [[./finalCopy/images/small.png]]
+
 Each satellite galaxy type was simulated for 2 whole rotations around the Milky Way. As seen, the initial conditions of the satellite have very noticeable effects on the stellar streams produced. The stellar stream resulting from the massive satellite collapses into the Milky Way, suggesting that stellar streams that cross the Milky Way were most likely former massive satellites. As the satellites become smaller, their leading tail radius becomes larger. In short, the larger the satellite, the closer it's stellar stream is to the Milky Way. 
 
 ** References:
