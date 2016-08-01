@@ -4,14 +4,73 @@
 *** Referenced Papers: [[papers/][papers/]]
 *** Misc Notes for Papers: [[notes.org][notes.org]]
 
+* (Extremely) Abridged Paper:
+** Note:
+You should read the real paper if you're interested at [[https://github.com/peixian/StellarStreamPaper/blob/master/finalCopy/finalPaper.pdf][https://github.com/peixian/StellarStreamPaper/blob/master/finalCopy/finalPaper.pdf]]. 
 ** Introduction:
 A stellar stream is a trail of stars that orbit a host galaxy. Usually formed through [[https://en.wikipedia.org/wiki/Tidal_stripping][tidal stripping]] of former [[https://en.wikipedia.org/wiki/Dwarf_galaxy][dwarf galaxies]], stellar streams are composed of two distinct parts: a leading tail and a trailing tail.
 ** Examples of stellar streams: 
-[[https://en.wikipedia.org/wiki/Field_of_Streams][Vasily Belokurov's Field of Streams] is the best example of stellar streams in the Milky Way, displayed below:
+[[https://en.wikipedia.org/wiki/Field_of_Streams][Vasily Belokurov's Field of Streams]] is the best example of stellar streams in the Milky Way, displayed below:
 #+CAPTION Vasily's Field of Streams
 [[./finalCopy/images/fieldofstreams.jpg]]
-In this picture from the [[http://www.ast.cam.ac.uk/~vasily/][SDSS]], the color corresponds to distance, 
+In this picture from the [[http://www.ast.cam.ac.uk/~vasily/][SDSS]], the color corresponds to distance, showing 2 large stellar streams: [[papers/ghostOfSagittarius.pdf][the Sagittarius Stream]] and the [[papers/Virgo\ Overdensity.pdf][Orphan Stream]]. 
 ** Formation of stellar streams:
+Originally, the host galaxy and the satellite dwarf galaxy are held within a [[https://en.wikipedia.org/wiki/Two-body_problem][2 body system]], shown below:
+#+CAPTION 2 Body Problem
+[[./images/2body.gif]] 
+However, as the satellite dwarf galaxy moves through it's [[./papers/Dynamics\ of \ Interacting\ Galaxies.pdf][Lagrange Points]], shown below:
+#+CAPTION Lagrange Points
+[[./images/lagrange.png]]
+the satellite dwarf galaxy begins to vibrate at the stable L4 and L5 points. As a result of this, stars are "leaked" from the satellite galaxy to orbits with either smaller radius (thus lower energy) or orbits with larger radius (thus higher energy). Due to this energy differential, the leading and trailing tail of a stellar stream is formed, as can be seen in the extremely crude picture I made below:
+#+CAPTION Leading and Trailing Tails
+[[./images/tailformation.png]]
+Imagine the red sphere is a satellite galaxy orbiting around an (unseen) Milky Way. The blue arrow represents the direction of the orbital energy of the satellite galaxy, while the stars the satellite is leaking falls into one of the two red arrows.
 ** My results:
+I conducted /n/-body simulations of 3 types of satellite galaxies with 10^6 particles for each galaxy type using [[http://bima.astro.umd.edu/nemo/][NEMO]]:
+| Satellite Size          | Mass Relative to the Milky Way Virial Mass | Radius Relative to the Milky Way Virial Radius | Velocity Relative to the Maximum Milky Way Velocity |
+|-------------------------+--------------------------------------------+------------------------------------------------+-----------------------------------------------------|
+| Massive                 | 1.9 * 10^(-2)                              | 9.02 * 10^(-2)                                 |                                                0.45 |
+| Medium/Sagittarius Size | 9.0 * 10^(-4)                              | 3.38 * 10^(-2)                                 |                                                0.16 |
+| Small                   | 9.9 * 10^(-4)                              | 1.66 * 10*(-2)                                 |                                                0.08 | 
+
+Using these 3 types, I generated 3 distinct stellar streams:
+- Massive Satellite Tail:
+#+CAPTION Tail of the Massive Satellite
+[[./finalCopy/images/large.png]]
+- Medium Satellite Tail:
+#+CAPTION Tail of the Medium Satellite
+[[./finalCopy/images/medium.png]]
+- Small Satellite Tail:
+#+CAPTION Tail of the Small Satellite
+[[./finalCopy/images/small.png]]
+Each satellite galaxy type was simulated for 2 whole rotations around the Milky Way. As seen, the initial conditions of the satellite have very noticeable effects on the stellar streams produced. The stellar stream resulting from the massive satellite collapses into the Milky Way, suggesting that stellar streams that cross the Milky Way were most likely former massive satellites. As the satellites become smaller, their leading tail radius becomes larger. In short, the larger the satellite, the closer it's stellar stream is to the Milky Way. 
+
 ** References:
+- Arnaboldi, M. 1994, Ap. J., 107
+- Bellazzini, M., & F., F. 2003, Ap. J., 125, 188
+- Belokurov, V., Zucker, D. B., Evans, N. W., et al.
+- 2006, The Astrophysical Journal Letters, 642, L137
+- Binney, J., & Tremaine, S. 1987, Galactic dynamics (Princeton University Press)
+- Buta, R. 1993, ASP, 105, 654
+- Chandrasekhar, S. 1943, ApJ
+- Choi, J.; Weinberg, M., & Katz, N. 2008, The Dynamics of Tidal Tails from Massive Satellites
+- Diemand, J., Kuhlen, M., & Madau, P. 2007, ApJ, 667, 859
+- Fellhauer, M., Belokurov, V., Evans, N. W., et al. 2006, The Astrophysical Journal, 651, 167
+- Foster, C., Lux, H., Romanowsky, A. J., et al. 2014, 442, 3544
+- Franx, M. 2010, Structure of Dark Matter Halos
+- Gilmore, G.; Wise, R. F. G., & Norris. 2002, Ap. J., 574, L39
+- Grillmair, C. J., & Dionatos, O. 2006, The Astrophysical Journal Letters, 641, L37
+- Ibata, R. A., & Lewis, G. F. 1998, , 500, 575
+- Johnston, K. V., Sackett, P. D., & Bullock, J. S. 2001, The Astrophysical Journal, 557, 137
+- Johnston, K.; Hernquist, L., & Bolte, M. 1996, Ap. J., 465
+- Knapp, G.R.; Driel, W., & Woerden, H. 1984, Astron. Astrophys., 142, 1
+- Kypin, A.; Gottober, S., & A., K. 1999, Ap. J., 516, 530
+- L., B. G. L. N. M. 1998, ApJ, 495, 80
+- Leon, S., Meylan, G., & Combes, F. 2000, , 359, 907
+- Lynds, R., & Toomre, A. 1976, Ap. J., 209
+- Martinez-Delgado, e. a. 2007, Ap. J., 660, 1264
+- Martinez-Delgado, D., Pohlen, M., Gabany, R. J., et al. 2009, The Astrophysical Journal, 692, 955
+- Monany, e. a. 2006, Astronomy and Astrophysics NASA/ESA. 2010, Cartwheel Galaxy
+- Newberg, e. a. 2002, Ap. J., 596, 245 Struck-Marcell, C., & Lotan, P. 1990, Ap. J., 358, 99
+- Wannier, P., & Wrixon, G. 1972, Ap. J., 173, L119
 
