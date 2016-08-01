@@ -2,6 +2,13 @@
 *** Full Paper: [[https://github.com/peixian/StellarStreamPaper/blob/master/finalCopy/finalPaper.pdf][https://github.com/peixian/StellarStreamPaper/blob/master/finalCopy/finalPaper.pdf]]
 *** Presentation: [[finalCopy/Stellar\ Streams.pdf][finalCopy/Stellar Streams.pdf]]
 *** Referenced Papers: [[papers/][papers/]]
+*** Misc Paper Notes: [[notes.org][notes.org]]
 
-* Introduction:
+** Introduction:
 A stellar stream is a trail of stars that orbit a host galaxy. Usually formed through [[https://en.wikipedia.org/wiki/Tidal_stripping][tidal stripping]] of former [[https://en.wikipedia.org/wiki/Dwarf_galaxy][dwarf galaxies]], stellar streams are composed of two distinct parts: a leading tail and a trailing tail.
+** Examples of stellar streams: 
+Vasily's 
+** Formation of stellar streams:
+** My results:
+** References:
+
